@@ -1,0 +1,166 @@
+.add-menu-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2::after {
+    content: '메뉴 추가';
+    display: block;
+    font-size: 0.6em;
+    color: #e44d26;
+    margin-top: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #e44d26;
+    box-shadow: 0 0 0 3px rgba(228, 77, 38, 0.1);
+}
+
+.add-button {
+    background-color: #e44d26;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.add-button:hover {
+    background-color: #c73e1d;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(228, 77, 38, 0.2);
+}
+
+.add-pokemon-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.add-pokemon-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #FF0000, #FFDE00);
+    border-radius: 20px 20px 0 0;
+}
+
+.title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #FFDE00;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.pokemon-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group input::placeholder {
+    color: #95a5a6;
+}
+
+.add-icon {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .add-menu-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-pokemon-container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    .form-group input {
+        padding: 12px;
+    }
+} 
